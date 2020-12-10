@@ -30,12 +30,14 @@ public class FileOpenManager {
     public List<String> getAllKeys() {
         Set<String> files = new HashSet<>(map.keySet());
         ArrayList<String> listFiles = new ArrayList<>(files);
+        listFiles.sort(Comparator.naturalOrder());
         return listFiles;
     }
 
     public List<String> getAllValues() {
         Set<String> files = new HashSet<>(map.values());
         ArrayList<String> listFiles = new ArrayList<>(files);
+        listFiles.sort(Comparator.naturalOrder());
         return listFiles;
     }
 
